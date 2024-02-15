@@ -1,0 +1,57 @@
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.stroke-dotted {
+    opacity: 0;
+    stroke-dasharray: 4, 5;
+    stroke-width: 8px;
+    transform-origin: 50% 50%;
+    animation: spin 4s infinite linear;
+    transition: opacity 1s ease,
+        stroke-width 1s ease;
+    fill: #09ed05;
+}
+
+.stroke-solid {
+    stroke-dashoffset: 0;
+    stroke-dashArray: 300;
+    stroke-width: 5px;
+    transition: stroke-dashoffset 1s ease,
+        opacity 1s ease;
+
+}
+
+.icon {
+    fill: #49e610;
+    transform-origin: 50% 50%;
+    transition: transform 200ms ease-out;
+}
+
+/* Hover */
+#play:hover .stroke-dotted {
+    stroke-width: 4px;
+    opacity: 1;
+}
+
+#play:hover .stroke-solid {
+    opacity: 0;
+    stroke-dashoffset: 300;
+}
+
+#play:hover .icon {
+    transition: all 1s linear;
+    transform: scale(1.2);
+    fill: #3d47a0;
+}
+
+
+#play {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}

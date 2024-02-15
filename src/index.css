@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+:root {
+    --dark: #111827;
+    --dark2: #1F2937;
+    --green: #2EC55E;
+    --white-text: #ffffff;
+    --gray-text: #c7c4c4;
+    --gradient: linear-gradient(98.37deg, #13ee58 0.99%, #067d2c 100%);
+}
+
+.fontFamaily {
+    font-family: 'Rubik 80s Fade', system-ui;
+
+}
+
+
+.shadowss {
+    background: var(--gradient);
+    box-shadow: 5px 10px 30px 10px #111827;
+    transition: all 0.5s ease-in-out;
+}
+
+.shadows {
+    transition: all 0.5s ease-in-out;
+}
+
+.shadowss:hover {
+    scale: 1.1;
+}
+
+.shadows:hover {
+    scale: 1.02;
+}
+
+
+.slider {
+    margin: 0 20px;
+    /* overflow: hidden; */
+    padding: 2rem 0;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.react-multi-carousel-list {
+    padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button {
+    border: none;
+    background: var(--dark2);
+}
+
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+    background: var(--green) !important;
+}
+
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.carousel__btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__btn--prev {
+    left: 0;
+}
+
+.carousel__btn--next {
+    right: 0;
+}
+
+.carousel__img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel__img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.banner {
+    align-items: center;
+}
+
+
+.poster-overlay {
+    width: 50vw;
+    position: relative;
+    top: -30rem;
+    left: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.poster-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    margin: 2px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid rgb(62, 246, 16);
+}
+
+.poster {
+    font-weight: bolder;
+    text-shadow: 4px 5px 19px black;
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.poster-rating {
+    font-size: 1.2rem;
+}
+
+.poster-description {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    margin: 5px;
+}
+
+@media screen and (min-width: 800px) {
+    .carousel {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .banner {
+        align-items: center;
+        height: 70vh;
+    }
+
+    .carousel {
+        height: 90vh;
+        overflow: auto;
+    }
+
+    .poster-overlay {
+        padding: 10px;
+        text-align: left;
+        color: white;
+        margin-top: 1rem;
+        position: absolute;
+        top: 7rem;
+    }
+
+    .poster-title {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 2rem;
+        margin: 2px;
+        border-bottom: 2px solid cyan;
+    }
+
+    .poster {
+        font-weight: bolder;
+        text-shadow: 4px 5px 19px black;
+        display: flex;
+        gap: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .poster-rating {
+        font-size: 1rem;
+    }
+
+    .poster-description {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        align-items: center;
+        height: 110vh;
+    }
+
+    .poster-overlay {
+        width: 70vw;
+        padding: 3rem;
+        text-align: left;
+        color: white;
+        margin-top: 1rem;
+        position: relative;
+        top: 0.6rem;
+        left: 3rem;
+    }
+
+    .poster-title {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 2.5rem;
+        margin: 2px;
+        border-bottom: 2px solid cyan;
+    }
+
+    .poster {
+        font-weight: bolder;
+        text-shadow: 4px 5px 19px black;
+        display: flex;
+        gap: 1.2rem;
+        font-size: 1.2rem;
+    }
+
+    .poster-rating {
+        font-size: 1.2rem;
+    }
+
+    .poster-description {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .carousel {
+        height: 25vh;
+        overflow: auto;
+    }
+
+    .poster-overlay {
+        width: 70vw;
+        padding: 1rem;
+        text-align: left;
+        color: white;
+        position: absolute;
+        top: 0rem;
+        left: 1rem;
+    }
+
+    .poster-title {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1.8rem;
+        margin: 2px;
+        border-bottom: 2px solid cyan;
+    }
+
+    .poster {
+        font-weight: bolder;
+        text-shadow: 4px 5px 19px black;
+        display: flex;
+        gap: 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .poster-rating {
+        font-size: 1rem;
+    }
+
+    .poster-description {
+        font-family: "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+        margin: 5px;
+    }
+}
+
+* {
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--green);
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: var(--dark);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--dark2);
+    }
+}
+
+.blurBg {
+    filter: blur(100px);
+}
+
+
+.react-multiple-carousel__arrow:hover {
+    background-color: #000 !important;
+}
+
+.react-multiple-carousel__arrow {
+    opacity: 0.8 !important;
+    z-index: 10 !important;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
